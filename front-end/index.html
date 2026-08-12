@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">  
+<!-- L'attribut lang="fr" indique que la langue principale de la page est le français -->
+<head>
+    <meta charset="UTF-8"> 
+    <!-- Définit l'encodage des caractères en UTF-8, ce qui permet d'afficher correctement tous les accents et caractères spéciaux (é, è, ç, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Règle l'affichage sur les mobiles. La largeur de la page s'adapte à celle de l'écran et le zoom initial est à 100 %. -->
+    <title>Prenez Rendez-vous|Centre Expert </title>
+    <link rel="stylesheet" href="style.css">   
+</head>
+
+<body>
+
+    <header>
+        <h1>Centre Expert</h1>
+        <p>Votre partenaire de confiance</p>
+    </header>
+    <hr/>
+
+    <h3>BIENVENUE SUR NOTRE SITE DE PRISE DE RENDEZ-VOUS</h3>
+
+    <main>
+        <section class="hero">
+            <h2>Un accompagnement sur mesure</h2>
+            <p>Remplissez le formulaire ci-dessous et nous vous recontacterons dans les plus brefs délais.</p>
+        </section>
+
+        <section class="form-section">
+            <form id="rdvForm" novalidate> <!-- ciblage en JS avec l'id, "novalidate" désactive la validation automatique HTML5 pour que ce soit le script JS qui gère les erreurs -->
+                <div class="form-group">
+                    <label for="nom">Nom complet <span class="required-star">*</span></label>
+                    <input type="text" id="nom" name="nom" required autocomplete="name"> 
+                    <!-- "riquired" rend le champ obligatoire (mais a été désactivé par "novalidate"), autocomplete="name" aide le navigateur à proposer des saisies automatiques. -->
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse email <span class="required-star">*</span></label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Téléphone <span class="required-star">*</span></label>
+                    <input type="tel" id="telephone" name="telephone" required autocomplete="tel">
+                </div>
+                <div class="form-group">
+                    <label for="date">Date souhaitée <span class="required-star">*</span></label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (facultatif)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+
+                <!-- Champ honeypot (anti-spam) -->
+                <!-- C'est un piège à robots (anti-spam). Le conteneur est caché avec "display:none" dans le css. Un robot malveillnt remplira ce champ, mais un humain ne le verra pas. Le script JS pourra vérifier s'il est vide pour accepter ou rejeter l'envoi. tabindex="-1" empêche d'y accéder avec la touche Tab -->
+                <div class="honeypot" >
+                    <label for="website">Ne rien remplir</label>
+                    <input type="text" id="website" name="website" tabindex="-1">
+                </div>
+
+                <button type="submit">Envoyer ma demande</button>
+                <div id="formFeedback" class="feedback">
+                    <!-- Zone vide qui servira à afficher les messages de confirmation ou d'erreur et est gérépar le JavaScript -->
+                </div>
+            </form>
+        </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Centre Expert - Tous droits réservés</p>
+    <!-- "&copy" affiche le symbole de copyright -->
+  </footer>
+
+   <script src="script.js"></script> 
+   <!-- Charge le fichier JavaScript externe script.js qui va gérer:
+    - la validation des champs du formulaire
+    - la vérification du champ honeypot
+    - l'affichage des messages de retour pour confirmation ou erreur
+   -->
+</body>
+</html>
