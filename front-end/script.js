@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Icônes selon le type
-    const icon = type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️';
-    feedback.innerHTML = `<span class="icon">${icon}</span> ${msg}`;
+    
+    feedback.innerHTML = ` ${msg}`;
     feedback.className = `feedback ${type}`;
     feedback.style.opacity = '1';
     feedback.style.transform = 'translateY(0)';
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       const result = await response.json();
       if (response.ok) {
-        setFeedback('✅ Rendez-vous enregistré avec succès ! Nous vous recontacterons.', 'success');
+        setFeedback(' Rendez-vous enregistré avec succès ! Nous vous recontacterons.', 'success');
         form.reset();
       } else {
         setFeedback( (result.error || 'Erreur serveur.'), 'error');

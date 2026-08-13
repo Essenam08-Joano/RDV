@@ -191,18 +191,13 @@ button[type="submit"]:active {
   color: #fca5a5;
 }
 
-.feedback .icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-
 /* ===== HONEYPOT ===== */
 .honeypot {
   display: none !important;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 640px) {
+@media (min-width: 640px) {
   body {
     padding: 1rem;
   }
