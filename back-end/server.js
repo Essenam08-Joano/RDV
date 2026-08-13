@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../front-end')));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Fichier de stockage
 const DATA_FILE = path.join(__dirname, 'data.json');
