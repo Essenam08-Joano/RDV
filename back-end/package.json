@@ -1,0 +1,19 @@
+{
+  "name": "prise-rendez-vous-backend",
+  "version": "1.0.0",
+  "description": "Backend pour mini-site de prise de rendez-vous",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "js": "^0.1.0",
+    "node": "^26.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
+
