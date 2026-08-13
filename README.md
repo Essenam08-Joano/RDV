@@ -92,12 +92,12 @@ Réponses JSON structurées avec codes HTTP (201, 400, 409, 500).
 projet/
 ├── backend/
 │   ├── server.js          # Serveur Express
-│   └── data.json          # Stockage des rendez‑vous (créé automatiquement)
+│   └── data.json  
+|   |── package.json         # Stockage des rendez‑vous (créé automatiquement)
 ├── frontend/
 │   ├── index.html         # Formulaire
 │   ├── style.css          # Thème noir & gold
-│   └── script.js          # Validation et envoi
-├── package.json           # Dépendances et scripts
+│   └── script.js          # Validation et envoi          # Dépendances et scripts
 └── README.md              # Ce fichier
 ```
 
