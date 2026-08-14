@@ -6,12 +6,12 @@ Mini‑application de prise de rendez‑vous avec interface moderne (thème noir
 
 ## 📦 Contenu du projet
 
-- `frontend/index.html` – page HTML du formulaire  
-- `frontend/style.css` – design noir & gold avec effets de verre et dorure  
-- `frontend/script.js` – validation des champs, envoi au serveur, messages dynamiques  
-- `backend/server.js` – serveur Node.js / Express avec API REST et stockage JSON  
-- `backend/data.json` – fichier contenant tous les rendez‑vous (créé automatiquement)  
-- `package.json` – dépendances et scripts de lancement  
+- `front-end/index.html` – page HTML du formulaire  
+- `front-end/style.css` – design noir & gold avec effets de verre et dorure  
+- `front-end/script.js` – validation des champs, envoi au serveur, messages dynamiques  
+- `back-end/server.js` – serveur Node.js / Express avec API REST et stockage JSON  
+- `back-end/data.json` – fichier contenant tous les rendez‑vous (créé automatiquement)  
+- `back-end/package.json` – dépendances et scripts de lancement  
 
 ---
 
