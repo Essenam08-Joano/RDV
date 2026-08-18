@@ -45,7 +45,7 @@ app.post('/api/rendezvous', (req, res) => {
       return res.status(400).json({ error: 'Email invalide.' });
     }
     // Pour numéro français et Béninois
-    const phoneRegex = /^(?:(?:\+33|0)[1-9]\d{8}|(?:\+229|0)[1-9]\d{7,9})$/;
+    const phoneRegex = /^(?:(?:\+33|0)[1-9]\d{8}|(?:\+229|0)\d{7,9})$/;
     if (!phoneRegex.test(telephone.replace(/\s/g, ''))) {
       return res.status(400).json({ error: 'Téléphone invalide.' });
     }
