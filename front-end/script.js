@@ -64,9 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
       setFeedback('Veuillez entrer une adresse email valide.', 'error');
       return;
     }
-    const phoneRegex = /^(?:\+33|0)[1-9]\d{8}$/;
+    // Adaptation pour numéro français et Béninois
+    const phoneRegex = /^(?:(?:\+33|0)[1-9]\d{8}|(?:\+229|0)[1-9]\d{8})$/;
     if (!phoneRegex.test(telephone.replace(/\s/g, ''))) {
-      setFeedback('Veuillez entrer un numéro de téléphone valide (ex: 0612345678 ou +33612345678).', 'error');
+      setFeedback('Veuillez entrer un numéro de téléphone valide (de type français ou Béninois).', 'error');
       return;
     }
     const today = new Date();
