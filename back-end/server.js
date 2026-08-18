@@ -34,7 +34,7 @@ function writeData(data) {
 // Route POST /api/rendezvous
 app.post('/api/rendezvous', (req, res) => {
   try {
-    const { nom, email, telephone, date, message } = req.body;
+    const { nom, email, telephone, date, message, website } = req.body;
 
     // --- Validation côté serveur (redondante mais sécurisée) ---
     if (!nom || !email || !telephone || !date) {
