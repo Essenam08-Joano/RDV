@@ -65,6 +65,10 @@ app.post('/api/rendezvous', (req, res) => {
       return res.status(409).json({ error: 'Un rendez-vous existe déjà pour cet email à cette date.' });
     }
 
+    // Vérification honeypot côté serveur
+    if (website && website.trim() !== '') {
+      return res.status(403).json({ error: 'Requête suspecte (anti-spam).' });
+    }
     // Enregistrement
     const newRdv = {
       id: Date.now(),
