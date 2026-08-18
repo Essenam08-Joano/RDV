@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     // Adaptation pour numéro français et Béninois
-    const phoneRegex = /^(?:(?:\+33|0)[1-9]\d{8}|(?:\+229|0)[1-9]\d{8})$/;
+    const phoneRegex = /^(?:(?:\+33|0)[1-9]\d{8}|(?:\+229|0)[1-9]\d{7,9})$/;
     if (!phoneRegex.test(telephone.replace(/\s/g, ''))) {
       setFeedback('Veuillez entrer un numéro de téléphone valide (de type français ou Béninois).', 'error');
       return;
