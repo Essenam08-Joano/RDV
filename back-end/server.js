@@ -36,6 +36,11 @@ app.post('/api/rendezvous', (req, res) => {
   try {
     const { nom, email, telephone, date, message, website } = req.body;
 
+    // Vérification honeypot côté serveur (en premier pour éviter les traitements inutiles)
+    if (website && website.trim() !== '') {
+      return res.status(403).json({ error: 'Requête suspecte (anti-spam).' });
+    }
+
     // --- Validation côté serveur (redondante mais sécurisée) ---
     if (!nom || !email || !telephone || !date) {
       return res.status(400).json({ error: 'Champs obligatoires manquants.' });
@@ -65,10 +70,6 @@ app.post('/api/rendezvous', (req, res) => {
       return res.status(409).json({ error: 'Un rendez-vous existe déjà pour cet email à cette date.' });
     }
 
-    // Vérification honeypot côté serveur
-    if (website && website.trim() !== '') {
-      return res.status(403).json({ error: 'Requête suspecte (anti-spam).' });
-    }
     // Enregistrement
     const newRdv = {
       id: Date.now(),
