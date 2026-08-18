@@ -4,19 +4,19 @@
 * {
   margin: 0; /* Supprime toutes les marges internes par défaut du navigateur */
   padding: 0; /* Supprime toutes les marges externes par défaut du navigateur */
-  box-sizing: border-box; /* Change le modèle de boîte. Cela inclue l'utilisation du padding et du border pour le width et le heiht.*/
-  /*On repart d'une feuille blanche sans espacemants par défaut.*/
+  box-sizing: border-box; /* Change le modèle de boîte. Cela inclut l'utilisation du padding et du border pour le width et le height.*/
+  /*On repart d'une feuille blanche sans espacements par défaut.*/
 }
 
 body {
   font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
   background-image: radial-gradient(circle at 20% 30%, #f9d423 0%, #ecf006 90%);
-  min-height: 120vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
   line-height: 1.6; /* Interligne */
 }
 
@@ -29,15 +29,15 @@ header {
 h3{
   border-top: 3px solid #222;
   text-align: center;
-  margin-bottom: 3rem;
-  padding-top: 2rem;
-  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 1px;
   color: whitesmoke;
 }
 header h1 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: 2px;
   background: linear-gradient(135deg, #1a1a1a, #0b0b0b);
@@ -47,7 +47,7 @@ header h1 {
   text-shadow: 0 0 40px rgba(182, 190, 233, 0.945);
 }
 header p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #1e2f47;
   margin-top: 0;
   letter-spacing: 1px;
@@ -71,14 +71,14 @@ footer {
   margin: 0 auto 2.5rem auto;
 }
 .hero h2 {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #202a38;
   margin-bottom: 0.5rem;
 }
 .hero p {
   color: #0e0707;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* ===== FORM SECTION ===== */
@@ -90,7 +90,7 @@ footer {
   backdrop-filter: blur(12px);
   border: 1px solid #333;
   border-radius: 2rem;
-  padding: 2.5rem 2rem;
+  padding: 1.5rem 1.2rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(249, 212, 35, 0.15) inset;
   transition: box-shadow 0.3s ease;
 }
@@ -126,7 +126,7 @@ textarea {
   font-size: 1rem;
   transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
 }
-/*"focus": cible l'élément actif (celui dans lequel l'utilisateur est entrain de taper. */
+/*"focus": cible l'élément actif (celui dans lequel l'utilisateur est en train de taper. */
 input:focus,
 textarea:focus {
   outline: none;
@@ -142,11 +142,11 @@ textarea::placeholder {
 /* ===== BUTTON ===== */
 button[type="submit"] {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0.9rem 1.5rem;
   background: linear-gradient(135deg, #f9d423, #e8b004);
   border: none;
   border-radius: 3rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #0b0b0b;
   cursor: pointer;
@@ -196,18 +196,33 @@ button[type="submit"]:active {
   display: none !important;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE — mobile-first : les bases ci-dessus sont mobile, ci-dessous desktop ===== */
 @media (min-width: 640px) {
   body {
-    padding: 1rem;
+    padding: 1.5rem;
   }
   header h1 {
-    font-size: 2.2rem;
+    font-size: 3rem;
+  }
+  header p {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
   }
   .form-section {
-    padding: 1.8rem 1.2rem;
+    padding: 2.5rem 2rem;
   }
   button[type="submit"] {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
   }
 }

@@ -31,7 +31,7 @@
                 <div class="form-group">
                     <label for="nom">Nom complet <span class="required-star">*</span></label>
                     <input type="text" id="nom" name="nom" required autocomplete="name"> 
-                    <!-- "riquired" rend le champ obligatoire (mais a été désactivé par "novalidate"), autocomplete="name" aide le navigateur à proposer des saisies automatiques. -->
+                    <!-- "required" rend le champ obligatoire (mais a été désactivé par "novalidate"), autocomplete="name" aide le navigateur à proposer des saisies automatiques. -->
                 </div>
                 <div class="form-group">
                     <label for="email">Adresse email <span class="required-star">*</span></label>
@@ -51,7 +51,7 @@
                 </div>
 
                 <!-- Champ honeypot (anti-spam) -->
-                <!-- C'est un piège à robots (anti-spam). Le conteneur est caché avec "display:none" dans le css. Un robot malveillnt remplira ce champ, mais un humain ne le verra pas. Le script JS pourra vérifier s'il est vide pour accepter ou rejeter l'envoi. tabindex="-1" empêche d'y accéder avec la touche Tab -->
+                <!-- C'est un piège à robots (anti-spam). Le conteneur est caché avec "display:none" dans le css. Un robot malveillant remplira ce champ, mais un humain ne le verra pas. Le script JS pourra vérifier s'il est vide pour accepter ou rejeter l'envoi. tabindex="-1" empêche d'y accéder avec la touche Tab -->
                 <div class="honeypot" >
                     <label for="website">Ne rien remplir</label>
                     <input type="text" id="website" name="website" tabindex="-1">
@@ -59,7 +59,7 @@
 
                 <button type="submit">Envoyer ma demande</button>
                 <div id="formFeedback" class="feedback">
-                    <!-- Zone vide qui servira à afficher les messages de confirmation ou d'erreur et est gérépar le JavaScript -->
+                    <!-- Zone vide qui servira à afficher les messages de confirmation ou d'erreur et est géré par le JavaScript -->
                 </div>
             </form>
         </section>

@@ -8,9 +8,7 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
-    "express": "^5.2.1",
-    "js": "^0.1.0",
-    "node": "^26.7.0"
+    "express": "^5.2.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
